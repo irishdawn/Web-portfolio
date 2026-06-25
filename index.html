@@ -665,11 +665,13 @@
             transition: transform 0.5s ease;
         }
 
-        .project-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        }
+        .project-image{
+            imgwidth: 100% !important;
+    height: 200px !important; /* Forces all project images to have the exact same normal height */
+    object-fit: contain !important; /* Unzooms the image so the entire project is visible */
+    background-color: #f8f9fa; /* Adds a clean, neutral background if the image has gaps */
+    display: block;
+}
 
         .project-card:hover .project-image span {
             transform: scale(1.2) rotate(5deg);
@@ -1113,11 +1115,16 @@
         border-radius: 50%;
 
         .about-visual img {
-        width: 85%;
-        height: 85%;
-        object-fit: contain;
-        border-radius: 50%;
-        }
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 350px;        /* Prevents your face from becoming massive on desktop */
+    max-height: 350px;       /* Keeps it a normal, proportionate size */
+    border-radius: 50%;      /* Remove this line if you don't want a circular image */
+    object-fit: cover !important; /* Crops perfectly so your face isn't stretched */
+    object-position: center !important; /* Centers the camera frame on your face */
+    display: block;
+    margin: 0 auto;          /* Centers the image container itself */
+}
         
             
 }
