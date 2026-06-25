@@ -585,6 +585,16 @@
             z-index: 1;
         }
 
+        .about-visual img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;        /* Scales the photo cleanly without squishing your face */
+        object-position: center;  /* Keeps your face right in the center */
+        position: relative;
+        z-index: 2;               /* Keeps the picture sitting cleanly above the background effects */
+        border-radius: 18px;      /* Matches the inner border curve of your container */
+        }
+
         .about-visual:hover {
             transform: scale(1.02);
             box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
@@ -1104,30 +1114,7 @@
             background-clip: text;
             font-weight: 600;
         }
-
-        .about-visual {
-        width: 220px;
-        height: 220px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        border-radius: 50%;
-
-        .about-visual img {
-    width: 100% !important;
-    height: 100% !important;
-    max-width: 350px;        /* Prevents your face from becoming massive on desktop */
-    max-height: 350px;       /* Keeps it a normal, proportionate size */
-    border-radius: 50%;      /* Remove this line if you don't want a circular image */
-    object-fit: cover !important; /* Crops perfectly so your face isn't stretched */
-    object-position: center !important; /* Centers the camera frame on your face */
-    display: block;
-    margin: 0 auto;          /* Centers the image container itself */
-}
         
-            
-}
 }
     </style>
 </head>
