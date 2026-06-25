@@ -665,6 +665,12 @@
             transition: transform 0.5s ease;
         }
 
+        .project-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        }
+
         .project-card:hover .project-image span {
             transform: scale(1.2) rotate(5deg);
         }
@@ -1107,11 +1113,12 @@
         border-radius: 50%;
 
         .about-visual img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-}
-
+        width: 85%;
+        height: 85%;
+        object-fit: contain;
+        border-radius: 50%;
+        }
+        
             
 }
 }
