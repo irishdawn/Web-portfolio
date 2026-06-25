@@ -675,17 +675,22 @@
             transition: transform 0.5s ease;
         }
 
-        .project-image{
-            imgwidth: 100% !important;
-    height: 200px !important; /* Forces all project images to have the exact same normal height */
-    object-fit: contain !important; /* Unzooms the image so the entire project is visible */
-    background-color: #f8f9fa; /* Adds a clean, neutral background if the image has gaps */
-    display: block;
-}
+        /* --- FIXED: Added missing space and target selector --- */
+        .project-image img {
+            width: 100% !important;
+            height: 100% !important; 
+            object-fit: contain !important; /* Unzooms your project pictures perfectly */
+            position: relative;
+            z-index: 2;
+            background-color: #f8f9fa; 
+            display: block;
+        }
 
         .project-card:hover .project-image span {
             transform: scale(1.2) rotate(5deg);
         }
+
+       
 
         .project-content {
             padding: 2.5rem;
